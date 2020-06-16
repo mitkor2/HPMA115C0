@@ -33,6 +33,7 @@ HPMA115C0-003 / HPMA115C0-004 are measuring PM1.0, PM2.5, PM4.0 and PM10.
 **NOTE: The delay before initialization should be minimum 2000ms otherwise the sensor is going to autosend mode and it is not received commands anymore.**
 ```sh
 /**
+/**
  * @file example.ino
  * @author Dimitar Rangelov
  * @date June 2020
@@ -44,7 +45,7 @@ HPMA115C0-003 / HPMA115C0-004 are measuring PM1.0, PM2.5, PM4.0 and PM10.
 #include <SoftwareSerial.h>
 
 //Create an instance of software serial
-SoftwareSerial hpmaSerial(10, 11);	// Feather TX, Feather RX
+SoftwareSerial hpmaSerial(10, 11);  // Feather TX, Feather RX
 
 //Create an instance of the hpma115C0 library
 
@@ -53,8 +54,8 @@ HPMA115C0 hpma115C0(hpmaSerial);
 void setup() 
 {
   Serial.begin(115200);
-  hpmaSerial.begin(9600)			// Default sensor baud rate - 9600
-  delay(2000);						// The delay should be 2000-5000 ms 
+  hpmaSerial.begin(9600)            // Default sensor baud rate - 9600
+  delay(2000);                      // The delay should be 2000-5000 ms 
   Serial.println("Starting...");
   hpma115C0.Init();
 }
@@ -71,6 +72,7 @@ void loop()
   }
   delay(1000);
 }
+
 ```
 License
 ----
