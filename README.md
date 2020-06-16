@@ -65,8 +65,8 @@ void loop()
   uint32_t pm1_0,pm2_5,pm4_0,pm10;
   if (hpma115C0.ReadParticleMeasurement(&pm1_0,&pm2_5,&pm4_0,&pm10))
   {
-Serial.println("PM 1.0: " + String(pm1_0) + " ug/m3" );
-Serial.println("PM 2.5: " + String(pm2_5) + " ug/m3" );
+  Serial.println("PM 1.0: " + String(pm1_0) + " ug/m3" );
+  Serial.println("PM 2.5: " + String(pm2_5) + " ug/m3" );
     Serial.println("PM 4.0: " + String(pm4_0) + " ug/m3" );
     Serial.println("PM 10: " + String(pm10) + " ug/m3" );
   }
